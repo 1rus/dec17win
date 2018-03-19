@@ -5,7 +5,7 @@ node ('master') {
     }
     def pythonImage
     stage('build docker image'){
-	bat "docker build -t --name dec17win:test ."
+	bat "docker build -t dec17win:test --name dec17win ."
  //       pythonImage = docker.build('dec17win:test')
     }
     stage('test'){
