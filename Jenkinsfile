@@ -5,11 +5,11 @@ node ('master') {
     }
     def pythonImage
     stage('build docker image'){
-        pythonImage = docker.build('dec17:test')
+        pythonImage = docker.build('dec17win:test')
     }
     stage('test'){
         pythonImage.inside {
-            sh '''. /tmp/venv/bin/activate && python3 - m pytest frame-test --junitxml=results.xml'''
+            bat '''. /tmp/venv/bin/activate && python - m pytest frame-test --junitxml=results.xml'''
         }
     }
     stage('collect test results'){
