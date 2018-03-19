@@ -1,0 +1,5 @@
+# Runtime requirements
+numpy==1.12.0
+
+# pytest
+pytest==3.2.3

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="3" failures="0" name="pytest" skips="0" tests="3" time="5.265"><testcase classname="" file="frame-test/test_assertions.py" name="frame-test.test_assertions" time="0"><error message="collection failure">import file mismatch:
+imported module &apos;test_assertions&apos; has this __file__ attribute:
+  D:\DEC17\frame-test\test_assertions.py
+which is not the same as the test file we want to collect:
+  D:\dec17git\frame-test\test_assertions.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" file="frame-test/test_assertions_class.py" name="frame-test.test_assertions_class" time="0"><error message="collection failure">import file mismatch:
+imported module &apos;test_assertions_class&apos; has this __file__ attribute:
+  D:\DEC17\frame-test\test_assertions_class.py
+which is not the same as the test file we want to collect:
+  D:\dec17git\frame-test\test_assertions_class.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" file="frame-test/test_config.py" name="frame-test.test_config" time="0"><error message="collection failure">D:\Python360\lib\urllib\request.py:1318: in do_open
+    encode_chunked=req.has_header(&apos;Transfer-encoding&apos;))
+D:\Python360\lib\http\client.py:1239: in request
+    self._send_request(method, url, body, headers, encode_chunked)
+D:\Python360\lib\http\client.py:1285: in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+D:\Python360\lib\http\client.py:1234: in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+D:\Python360\lib\http\client.py:1026: in _send_output
+    self.send(msg)
+D:\Python360\lib\http\client.py:964: in send
+    self.connect()
+D:\Python360\lib\http\client.py:936: in connect
+    (self.host,self.port), self.timeout, self.source_address)
+D:\Python360\lib\socket.py:722: in create_connection
+    raise err
+D:\Python360\lib\socket.py:713: in create_connection
+    sock.connect(sa)
+E   ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+frame-test\test_config.py:29: in &lt;module&gt;
+    browser = browser.Browser(default_browser, cf)
+browser.py:85: in __init__
+    self.driver = SframeWebdriver(desired_capabilities=caps,command_executor=com_exe,browser_profile=profile)
+framedriver.py:11: in __init__
+    super(SframeWebdriver, self).__init__(**kwargs)
+D:\Python360\lib\site-packages\selenium\webdriver\remote\webdriver.py:98: in __init__
+    self.start_session(desired_capabilities, browser_profile)
+D:\Python360\lib\site-packages\selenium\webdriver\remote\webdriver.py:188: in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+D:\Python360\lib\site-packages\selenium\webdriver\remote\webdriver.py:250: in execute
+    response = self.command_executor.execute(driver_command, params)
+D:\Python360\lib\site-packages\selenium\webdriver\remote\remote_connection.py:464: in execute
+    return self._request(command_info[0], url, body=data)
+D:\Python360\lib\site-packages\selenium\webdriver\remote\remote_connection.py:526: in _request
+    resp = opener.open(request, timeout=self._timeout)
+D:\Python360\lib\urllib\request.py:526: in open
+    response = self._open(req, data)
+D:\Python360\lib\urllib\request.py:544: in _open
+    &apos;_open&apos;, req)
+D:\Python360\lib\urllib\request.py:504: in _call_chain
+    result = func(*args)
+D:\Python360\lib\urllib\request.py:1346: in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+D:\Python360\lib\urllib\request.py:1320: in do_open
+    raise URLError(err)
+E   urllib.error.URLError: &lt;urlopen error [WinError 10061] No connection could be made because the target machine actively refused it&gt;</error></testcase></testsuite>
